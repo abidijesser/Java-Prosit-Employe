@@ -61,7 +61,7 @@ public class Employe implements Comparable<Employe> {
     public boolean equals(Object obj){
 
         if (obj == null) return false ;
-        if (this == obj) return true ;
+        if (this == obj || getClass() != obj.getClass()) return true ;
         if ( obj instanceof Employe employe){
             return getId()==employe.getId() && getNom().equals(employe.getNom()) ;
         }
