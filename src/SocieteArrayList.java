@@ -51,7 +51,7 @@ public class SocieteArrayList implements IGestion<Employe>{
         Comparator<Employe> departementComparator = new Comparator<Employe>() {
             @Override
             public int compare(Employe o1, Employe o2) {
-                return o1.getNomDepartement().compareTo(o2.getNomDepartement());
+                return o1.getEmployeNomDepartement().compareTo(o2.getEmployeNomDepartement());
             }
         };
         Comparator<Employe> gradeComparator = new Comparator<Employe>() {
