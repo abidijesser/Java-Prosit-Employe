@@ -54,4 +54,13 @@ public class Departement implements Comparable<Departement>{
     public int compareTo( Departement departement){
         return this.getDepartementId() - departement.getDepartementId() ;
     }
+
+    @Override
+    public int hashCode() {
+        int result =17;
+        result= 31*result+departementId;
+        result= 31*result+nmbrEmployes;
+        result= 31*result+nomDepartement.hashCode();
+        return  result;
+    }
 }
