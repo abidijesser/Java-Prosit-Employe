@@ -3,18 +3,16 @@ public class Employe implements Comparable<Employe> {
     protected int id;
     protected String nom;
     protected String prenom;
-    protected String nomDepartement;
+    protected String employeNomDepartement;
     protected int grade;
 
-    public Employe(){
+    public Employe(){}
 
-    }
-
-    public Employe(int id, String nom, String prenom, String nomDepartement, int grade ){
+    public Employe(int id, String nom, String prenom, String employeNomDepartement, int grade ){
         this.id= id;
         this.nom=nom;
         this.prenom=prenom;
-        this.nomDepartement=nomDepartement;
+        this.employeNomDepartement=employeNomDepartement;
         this.grade=grade;
     }
 
@@ -42,11 +40,11 @@ public class Employe implements Comparable<Employe> {
         this.prenom = prenom;
     }
 
-    public String getNomDepartement() {
-        return nomDepartement;
+    public String getEmployeNomDepartement() {
+        return employeNomDepartement;
     }
-    public void setNomDepartement(String nomDepartement) {
-        this.nomDepartement = nomDepartement;
+    public void setEmployeNomDepartement(String employeNomDepartement) {
+        this.employeNomDepartement = employeNomDepartement;
     }
 
     public void setGrade(int grade) {
@@ -61,7 +59,7 @@ public class Employe implements Comparable<Employe> {
     public boolean equals(Object obj){
 
         if (obj == null) return false ;
-        if (this == obj) return true ;
+        if (this == obj || getClass() != obj.getClass()) return true ;
         if ( obj instanceof Employe employe){
             return getId()==employe.getId() && getNom().equals(employe.getNom()) ;
         }
@@ -70,7 +68,7 @@ public class Employe implements Comparable<Employe> {
 
     @Override
     public String toString(){
-        return " Employe {id: "+id+" ,Nom: "+nom+ " ,Prenom: "+prenom+ " ,Nom de departement: "+nomDepartement+" ,grade :"+grade+ "}" ;
+        return " Employe {id: "+id+" ,Nom: "+nom+ " ,Prenom: "+prenom+ " ,Nom de departement: "+employeNomDepartement+" ,grade :"+grade+ "}" ;
     }
 
     @Override
