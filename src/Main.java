@@ -21,5 +21,24 @@ public class Main {
         System.out.println("--------------------------------------------------------------------");
 
         System.out.println(departementHashSet.trierDepartementById());
+        System.out.println(departementHashSet.rechercherDepartement("Info"));
+        System.out.println(departementHashSet.rechercherDepartement(d1));
+
+        System.out.println("--------------------------------------------------------------------");
+
+        AffectationHashMap affectationHashMap= new AffectationHashMap() ;
+        Employe e1=new Employe(01, "abidi", "jasser", "d1", 5) ;
+        Employe e2=new Employe(02, "aloui", "amin", "d2", 4) ;
+        affectationHashMap.ajouterEmployeDepartement(e1, d1);
+        affectationHashMap.ajouterEmployeDepartement(e2, d2);
+        affectationHashMap.afficherEmployesEtDepartements();
+
+        System.out.println("--------------------------------------------------------------------");
+        Employe e3=new Employe(03, "belgacem", "raed", "d3", 3) ;
+        affectationHashMap.ajouterEmployeDepartement(e3, d3);
+        affectationHashMap.afficherEmployes();
+        affectationHashMap.afficherDepartements();
+
+        System.out.println(affectationHashMap.trierMap());
     }
 }

@@ -75,4 +75,15 @@ public class Employe implements Comparable<Employe> {
     public int compareTo( Employe employe){
         return this.id - employe.getId();
     }
+
+    @Override
+    public int hashCode() {
+        int result =17;
+        result= 31*result+id;
+        result= 31*result+nom.hashCode();
+        result= 31*result+prenom.hashCode();
+        result= 31*result+employeNomDepartement.hashCode();
+        result= 31*result+grade;
+        return  result;
+    }
 }
